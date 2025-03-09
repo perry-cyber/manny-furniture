@@ -9,8 +9,6 @@ const Snowfall = () => {
     let width = window.innerWidth;
     let height = window.innerHeight;
     let flakes: any[] = [];
-    let mouseX = -1;
-    let mouseY = -1;
 
     canvas.width = width;
     canvas.height = height;
@@ -25,9 +23,9 @@ const Snowfall = () => {
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
-        this.radius = Math.random() * 3 + 1;
-        this.speed = Math.random() * 2 + 0.5;
-        this.opacity = Math.random();
+        this.radius = Math.random() * 4 + 2;
+        this.speed = Math.random() * 0.2 + 0.1; // Super slow
+        this.opacity = Math.random() * 0.5 + 0.5;
       }
 
       update() {
@@ -35,15 +33,6 @@ const Snowfall = () => {
         if (this.y > height) {
           this.y = 0;
           this.x = Math.random() * width;
-        }
-
-        // If the flake is near the cursor, move it away
-        const dx = this.x - mouseX;
-        const dy = this.y - mouseY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < 50) {
-          this.y -= 10; // Move snowflake upward to simulate clearing the way
         }
       }
 
@@ -55,48 +44,25 @@ const Snowfall = () => {
       }
     }
 
-    // Initialize snowflakes
-    for (let i = 0; i < 100; i++) {
+    // Initialize only 4 snowflakes
+    for (let i = 0; i < 4; i++) {
       flakes.push(new Snowflake());
     }
-
-    // Handle resizing
-    const resize = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-      flakes = [];
-      for (let i = 0; i < 100; i++) {
-        flakes.push(new Snowflake());
-      }
-    };
-
-    // Track mouse position
-    const trackMouse = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    };
 
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
-
       flakes.forEach((flake) => {
         flake.update();
         flake.draw();
       });
-
       requestAnimationFrame(animate);
     };
 
-    window.addEventListener("resize", resize);
-    window.addEventListener("mousemove", trackMouse);
     animate();
 
     return () => {
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("mousemove", trackMouse);
+      flakes = [];
     };
   }, []);
 
