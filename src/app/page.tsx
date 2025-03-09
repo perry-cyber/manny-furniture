@@ -19,7 +19,7 @@ export default function GoogleGeminiEffectDemo() {
 
   return (
     <div
-      className="h-[500vh] inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,0,0.2),_transparent_20%),radial-gradient(circle_at_bottom,_rgba(255,255,0,0.2),_transparent_20%)] rounded-md relative pt-40 overflow-clip"
+      className="h-[500vh] inset-0 bg-black  bg-[radial-gradient(circle_at_top_right,_rgba(255,255,0,0.2),_transparent_20%),radial-gradient(circle_at_bottom,_rgba(255,255,0,0.2),_transparent_20%)] rounded-md relative pt-40 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
