@@ -180,7 +180,7 @@ export const GoogleGeminiEffect = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#fff"
       strokeWidth={1}
       className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer"
       onClick={() => window.location.href = "tel:+2349071770868"} // Replace with your number
@@ -198,7 +198,7 @@ export const GoogleGeminiEffect = ({
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="currentColor"
+      fill="#fff"
       className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 cursor-pointer"
       onClick={() => window.location.href = "https://wa.me/+2349033765699"} // Replace with your WhatsApp number
     >
