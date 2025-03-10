@@ -104,10 +104,10 @@ export  const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl  relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-5xl font-bold dark:text-white">
+      <h1 className="text-2xl md:text-5xl font-bold !text-white">
         Welcome to Manny Furnitures &<br />Interior Design
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-8 !text-neutral-200">
        A premier provider of bespoke furniture and upholstery solutions. We are a dynamic and innovative company that has established itself as a leader in the Nigerian furniture industry. 
       </p>
       <button className=" mt-4 mb-7 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-yellow-500 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
