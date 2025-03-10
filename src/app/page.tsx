@@ -53,7 +53,7 @@ export default function HeroParallaxDemo() {
   </>
   )
 }
-export const products = [
+ const products = [
   {
     title: "TV Console",
     link: "https://gomoonbeam.com",
