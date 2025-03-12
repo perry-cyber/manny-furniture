@@ -90,12 +90,7 @@ const CommunitySection = () => {
         </div>
       </div>
 
-      {/* Feedback Button */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 rotate-[-90deg]">
-        <button className="bg-white text-black px-3 py-2 rounded-lg font-medium">
-          Send Feedback
-        </button>
-      </div>
+    
     </div>
   );
 };

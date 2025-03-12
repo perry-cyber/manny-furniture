@@ -2,20 +2,30 @@
 import React from "react";
 import { HeroParallax } from "../components/ui/google-gemini-effect";
 import FloatingNavbar from '../components/FloatingNav';
-import Snowfall from "@/components/Snowfall";
+import Link from "next/link";
+// import Snowfall from "@/components/Snowfall";
 // import ScrollIndicator from "@/components/Scrolldown";
 
 export default function HeroParallaxDemo() {
 
   return( <>
      <div
-      className="flex justify-center items-center inset-0 bg-black  bg-[radial-gradient(circle_at_top_right,_rgba(255,255,0,0.2),_transparent_20%),radial-gradient(circle_at_bottom,_rgba(255,255,0,0.2),_transparent_20%)] rounded-md relative pb-4 overflow-clip"
+      className="flex justify-center items-center inset-0 bg-black  bg-[radial-gradient(circle_at_top_right,_rgba(255,255,0,0.2),_transparent_20%),radial-gradient(circle_at_bottom,_rgba(255,255,0,0.2),_transparent_20%)] relative pb-4 overflow-clip"
       
     >
        {/* <ScrollIndicator /> */}
-      <Snowfall/>
+      {/* <Snowfall/> */}
 <FloatingNavbar/>
   <HeroParallax products={products} />;
+      <Link href="/about" >
+         <p
+          className="absolute top-[68vh] left-5  lg:top-[81vh] lg:left-20 mt-4 mb-7 inline-flex h-12 items-center cursor-pointer justify-center rounded-md border border-yellow-700 
+          bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors 
+          focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 overflow-hidden"
+    >
+      Begin Journey
+    </p>
+         </Link>
   <div className="fixed bottom-10 left-4 group">
     <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex items-center bg-white text-black text-xs px-2 py-1 rounded-md">
       Reach us via Call

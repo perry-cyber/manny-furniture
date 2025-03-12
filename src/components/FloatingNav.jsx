@@ -1,26 +1,30 @@
+"use client";
 import React, { useState } from "react";
+import Link from "next/link";
 
 export default function FloatingNavbar() {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="fixed top-4 w-full flex justify-between items-center px-6 py-3 z-50 bg-transparent">
     {/* Logo - Fully Left */}
     <div className="bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg ml-6 w-28 h-28">
-      <img
+    <Link href="/"> <img
         src="https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreihpyskso3k3evs355tmrd5fn747g4liyhz3znjmutxio6ujpyrefu"
         alt="Logo"
         className="h-25 w-25 object-contain"
-      />
+      /></Link>
+     
     </div>
   
     {/* Navbar - Fully Right */}
     <nav className="hidden md:block bg-transparent backdrop-blur-md rounded-xl border border-yellow-700/50 shadow-lg px-6 py-3 mr-6">
       <ul className="flex justify-between items-center space-x-8 text-white font-semibold">
-        <li className="cursor-pointer hover:text-yellow-500 transition">Home</li>
-        <li className="cursor-pointer hover:text-yellow-500 transition">About Us</li>
-        <li className="cursor-pointer hover:text-yellow-500 transition">Catalog</li>
-        <li className="cursor-pointer hover:text-yellow-500 transition">Contact</li>
+        <li className="cursor-pointer hover:text-yellow-500 transition"><Link href="/">Home</Link></li>
+        <li className="cursor-pointer hover:text-yellow-500 transition"><Link href="/about">About Us</Link></li>
+        <li className="cursor-pointer hover:text-yellow-500 transition"><Link href="/catelog">Catalog</Link></li>
+        <li className="cursor-pointer hover:text-yellow-500 transition"><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>
   
@@ -47,15 +51,14 @@ export default function FloatingNavbar() {
       {isOpen && (
         <div className="absolute right-4 mt-3 w-44 bg-white text-black rounded-lg shadow-lg py-2">
           <ul className="text-sm space-y-2">
-            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700">Home</li>
-            <li onClick={() => window.location.href = "/about"}  className="px-4 py-2 cursor-pointer hover:bg-yellow-700">About</li>
-            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700">Contact</li>
+            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700"><Link href="/">Home</Link></li>
+            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700"><Link href="/about">About Us</Link></li>
+            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700"><Link href="/catelog">Catelog</Link></li>
+            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700"><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
       )}
     </div>
   </div>
-  
-  
   );
 }

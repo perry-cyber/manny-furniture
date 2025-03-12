@@ -7,7 +7,6 @@ import {
   useSpring,
   MotionValue,
 } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 
 // import { useRouter } from "next/router";
@@ -103,15 +102,6 @@ export  const HeroParallax = ({
 };
 
 export const Header = () => {
-  const [loading, setLoading] = useState(false);
-
-  const handleClick = () => {
-    setLoading(true); // Start loading effect
-    setTimeout(() => {
-      window.location.href = "/about"; // Navigate to About page
-    }, 1500);
-  };
-
   return (
 <div className="max-w-7xl relative mx-auto px-5 py-20 md:py-40 md:px-18 lg:px-18 w-full left-0 top-0">
   <h1 className="text-2xl md:text-5xl font-bold !text-white">
@@ -120,27 +110,12 @@ export const Header = () => {
   <p className="max-w-2xl text-base md:text-xl mt-8 !text-neutral-200">
     A premier provider of bespoke furniture and upholstery solutions. We are a dynamic and innovative company that has established itself as a leader in the Nigerian furniture and interior industry.
   </p>
-  <button
-          onClick={handleClick}
-          disabled={loading} // Disable button while loading
-          className={`relative mt-4 mb-7 inline-flex h-12 items-center cursor-pointer justify-center rounded-md border border-yellow-500 
-          bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors 
-          focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 overflow-hidden ${
-            loading ? "opacity-70 cursor-not-allowed" : ""
-          }`}
-        >
-          {loading ? (
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-gray-700 via-gray-900 to-gray-700"
-              initial={{ x: "-100%" }}
-              animate={{ x: "100%" }}
-              transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }}
-            />
-          ) : null}
-          <span className={`${loading ? "opacity-0" : "opacity-100"} relative`}>
-            Begin Journey
-          </span>
-        </button>
+
+
+      
+   
+      
+
 </div>
 
   );
