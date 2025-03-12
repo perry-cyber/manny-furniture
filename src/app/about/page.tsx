@@ -31,7 +31,7 @@ export default function About() {
         </p>
         
         <p className="text-gray-700 text-lg mt-4">
-          Crafted for efficiency and professionalism, Bizper empowers your business with seamless functionality and well-documented code. Build your corporate identity effortlessly and stand out in the digital landscape with Bizper.
+        We have established strategic partnerships with some of the leading interior designers and architects in Nigeria. These partnerships enable us to offer comprehensive solutions that meet our clients' needs, while also providing opportunities for collaboration, innovation, and growth.
         </p>
       </div>
     </section>
