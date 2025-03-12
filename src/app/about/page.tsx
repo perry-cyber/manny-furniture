@@ -6,6 +6,7 @@ import ReviewSlider from '@/components/ReviewSlider';
 import { WavyBackground } from '@/components/ui/wavy-background';
 import React, { useState } from "react";
 import Image from "next/image";
+import TimelineDemo from '@/components/Timeline';
 
 export default function About() {
   return (
@@ -17,27 +18,9 @@ export default function About() {
       </p>
       
     </WavyBackground>
-   
-    <section className="py-16 px-6 mb-20 md:px-16 lg:px-32 bg-transparent">
-      <div className=" mx-auto">
-        {/* Heading */}
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          Company Overveiw
-        </h2>
-        
-        {/* Description */}
-        <p className="text-gray-700 text-lg">
-          Introducing <strong>Manny Production</strong>: A premier provider of bespoke furniture and upholstery solutions. We are a dynamic and innovative company that has established itself as a leader in the Nigerian furniture industry. Our commitment to excellence, quality, and customer satisfaction has earned us a reputation as a trusted partner for individuals, businesses, and organizations seeking exceptional furniture and interior design services.
-        </p>
-        
-        <p className="text-gray-700 text-lg mt-4">
-        We have established strategic partnerships with some of the leading interior designers and architects in Nigeria. These partnerships enable us to offer comprehensive solutions that meet our clients' needs, while also providing opportunities for collaboration, innovation, and growth.
-        </p>
-      </div>
-    </section>
+<TimelineDemo/>
 
-
-    <div className="bg-white mb-28 text-black px-6 md:px-16 py-12 rounded-lg flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto shadow-xl w-full">
+    <div className="bg-white  mt-28 mb-28 text-black px-6 md:px-16 py-12 rounded-lg flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto shadow-xl w-full">
       {/* Image Section */}
       <div className="relative w-32 h-32 md:w-40 md:h-40 mb-6 md:mb-0 md:mr-8">
         <img
@@ -74,10 +57,9 @@ export default function About() {
             <div>
               <h3 className="font-semibold text-gray-300 mb-2">SERVICES</h3>
               <ul className="space-y-1 text-gray-400 text-sm">
-                <li><a href="#">Branding</a></li>
-                <li><a href="#">Design</a></li>
-                <li><a href="#">Marketing</a></li>
-                <li><a href="#">Advertisement</a></li>
+                <li><a href="#">Interor Design</a></li>
+                <li><a href="#">Furnishing</a></li>
+                <li><a href="#">upholstery solutions.</a></li>
               </ul>
             </div>
 
@@ -111,11 +93,11 @@ export default function About() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo & Info */}
           <div className="flex items-center space-x-2">
-          <div className=" bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg w-25 h-25">
+          <div className=" bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg w-20 h-20">
   <img
     src="https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreihpyskso3k3evs355tmrd5fn747g4liyhz3znjmutxio6ujpyrefu"
     alt="Logo"
-    className="h-19 w-19 md:w-14 md:h-14 object-contain"
+    className="h-4 w-14 md:w-14 md:h-14 object-contain"
   />
 </div>
             <div>
