@@ -7,10 +7,12 @@ import { WavyBackground } from '@/components/ui/wavy-background';
 import React, { useState } from "react";
 import Image from "next/image";
 import TimelineDemo from '@/components/Timeline';
+import ScrollIndicator from '@/components/Scrolldown';
 
 export default function About() {
   return (
     <div className='bg-black min-h-[60vh] pb-20 overflow-hidden'>
+      <ScrollIndicator/>
       <FloatingNavbar/>
       <WavyBackground className="w-full mx-auto flex items-center justify-center pb-10">
       <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
