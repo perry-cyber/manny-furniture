@@ -48,7 +48,7 @@ export default function FloatingNavbar() {
         <div className="absolute right-4 mt-3 w-44 bg-white text-black rounded-lg shadow-lg py-2">
           <ul className="text-sm space-y-2">
             <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700">Home</li>
-            <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700">About</li>
+            <li onClick={() => window.location.href = "/about"}  className="px-4 py-2 cursor-pointer hover:bg-yellow-700">About</li>
             <li className="px-4 py-2 cursor-pointer hover:bg-yellow-700">Contact</li>
           </ul>
         </div>
