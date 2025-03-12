@@ -123,7 +123,7 @@ export const Header = () => {
   <button
           onClick={handleClick}
           disabled={loading} // Disable button while loading
-          className={`relative mt-4 mb-7 inline-flex h-12 items-center justify-center rounded-md border border-yellow-500 
+          className={`relative mt-4 mb-7 inline-flex h-12 items-center cursor-pointer justify-center rounded-md border border-yellow-500 
           bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors 
           focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 overflow-hidden ${
             loading ? "opacity-70 cursor-not-allowed" : ""
