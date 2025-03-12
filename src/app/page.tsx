@@ -3,6 +3,7 @@ import React from "react";
 import { HeroParallax } from "../components/ui/google-gemini-effect";
 import FloatingNavbar from '../components/FloatingNav';
 import Snowfall from "@/components/Snowfall";
+// import ScrollIndicator from "@/components/Scrolldown";
 
 export default function HeroParallaxDemo() {
 
@@ -11,10 +12,11 @@ export default function HeroParallaxDemo() {
       className="flex justify-center items-center inset-0 bg-black  bg-[radial-gradient(circle_at_top_right,_rgba(255,255,0,0.2),_transparent_20%),radial-gradient(circle_at_bottom,_rgba(255,255,0,0.2),_transparent_20%)] rounded-md relative pb-4 overflow-clip"
       
     >
+       {/* <ScrollIndicator /> */}
       <Snowfall/>
 <FloatingNavbar/>
   <HeroParallax products={products} />;
-  <div className="fixed bottom-20 left-4 group">
+  <div className="fixed bottom-10 left-4 group">
     <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex items-center bg-white text-black text-xs px-2 py-1 rounded-md">
       Reach us via Call
       <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white"></div>
@@ -33,7 +35,7 @@ export default function HeroParallaxDemo() {
   </div>
 
   {/* WhatsApp Button - Right Side */}
-  <div className="fixed bottom-20 right-4 group">
+  <div className="fixed bottom-10 right-4 group">
     <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:flex items-center bg-white text-black text-xs px-2 py-1 rounded-md">
       Reach us on WhatsApp
       <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white"></div>
@@ -56,26 +58,26 @@ export default function HeroParallaxDemo() {
  const products = [
   {
     title: "TV Console",
-    link: "https://gomoonbeam.com",
+  
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreidzr2arqlqskqdfc2cd7o223ul5lbjaydmgjpyi5ufqntlezqayym",
   },
   {
     title: "Wardrobe",
-    link: "https://cursor.so",
+  
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreifk2s27k24pgqeya7m57vitnhlwrqw3debnxlbjkohezjunbd7rci",
   },
   {
     title: "TV Stand",
-    link: "https://userogue.com",
+ 
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreiccm5qnddeleyro2zj6gd3boi4ymaszuqlril2a6wth6auyty5opq",
   },
 
   {
     title: "Editorially",
-    link: "https://editorially.org",
+  
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreigavloespmyryfryfwz3xetvimi56tuamljkh5zbdf5nbxnfupr2m",
   },
@@ -87,63 +89,63 @@ export default function HeroParallaxDemo() {
   },
   {
     title: "Pixel Perfect",
-    link: "https://manny-furniture.vercel.app",
+  
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreibkgp57la66vbd6o4jqggrba6bwg33tccfnxrvf74fxtc4obmzzrm",
   },
 
   {
     title: "Algochurn",
-    link: "https://algochurn.com",
+   
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreiccm5qnddeleyro2zj6gd3boi4ymaszuqlril2a6wth6auyty5opq",
   },
   {
     title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+   
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreibkgp57la66vbd6o4jqggrba6bwg33tccfnxrvf74fxtc4obmzzrm",
   },
   {
     title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
   },
   {
     title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
   },
   {
     title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+   
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
   },
 
   {
     title: "Creme Digital",
-    link: "https://cremedigital.com",
+    
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreidzr2arqlqskqdfc2cd7o223ul5lbjaydmgjpyi5ufqntlezqayym",
   },
   {
     title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+  
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
   },
   {
     title: "Invoker Labs",
-    link: "https://invoker.lol",
+ 
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/invoker.png",
   },
   {
     title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+  
     thumbnail:
       "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreia7necmdjeo2zi3adxpak54elrgjuslogbzdrqhhv7vr5ttq2wpoy",
   },
