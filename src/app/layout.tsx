@@ -24,10 +24,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
+  <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                MomentCRM('init', {
+                  'teamVanityId': 'manny-livechat',
+                  'doChat': true,
+                  'doTimeTravel': true,
+                  'quadClickForFeedback': true,
+                });
+              `,
+            }}
+          />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script defer src="https://www.momentcrm.com/embed" />
       </body>
     </html>
   );
