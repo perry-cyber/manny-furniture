@@ -1,14 +1,21 @@
 import React from 'react'
 import { ParallaxScroll } from './ui/parallax-scroll'
 
-export default function Wardrobe() {
-  return (
-    <div className='bg-black'>
-      <h1 className='md:block text-xl pt-10 pb-10 md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500'>WARDROBE</h1>
+interface WardrobeProps {
+    id?: string;
+  }
+  
+  export default function Wardrobe({ id }: WardrobeProps) {
+    return (
+      <div id={id} className="bg-black">
+        <h1 className="md:block text-xl pt-10 pb-10 md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
+          WARDROBE
+        </h1>
         <ParallaxScroll images={images} />
-    </div>
-  )
-}
+      </div>
+    );
+  }
+  
 
 
 const images = [

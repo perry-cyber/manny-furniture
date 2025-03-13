@@ -2,23 +2,79 @@
 import FloatingNavbar from "@/components/FloatingNav";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
-import React from "react";
+import React, { useState } from "react";
 import Sofa from "@/components/Sofa";
 import Kitchen from "@/components/Kitchen";
 import Wardrobe from "@/components/Wardrobe";
+import ScrollIndicator from "@/components/Scrolldown";
 
 export default function page() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [error, setError] = useState(""); // State to track errors
+  const sectionMap: { [key: string]: string } = {
+    sofa: "sofa-section",
+    kitchen: "kitchen-section",
+    wardrobe: "wardrobe-section",
+  };
+
+  const handleSearch = () => {
+    const formattedTerm = searchTerm.toLowerCase().trim();
+
+    if (sectionMap[formattedTerm]) {
+      document.getElementById(sectionMap[formattedTerm])?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      setError(""); // Clear error when successful
+    } else {
+      setError("Section not found! Try 'Sofa', 'Kitchen', or 'Wardrobe'.");
+
+      // Clear error after 2 seconds
+      setTimeout(() => {
+        setError("");
+      }, 2000);
+    }
+  };
+
   return (
-    <div>
+    <div className="bg-black">
       <FloatingNavbar />
       <WavyBackground className="w-full mx-auto flex items-center justify-center pb-10">
         <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
           OUR CATELOG
         </p>
+        <ScrollIndicator/>
       </WavyBackground>
-      <Sofa />
-      <Kitchen />
-      <Wardrobe />
+      <div className="mt-4 flex justify-center">
+  <div className="flex items-center space-x-2 w-4/5 md:w-3/5 lg:w-2/5 bg-black p-2 rounded-md">
+    <input
+      type="text"
+      placeholder={error || "Search for Sofa, Kitchen, Wardrobe..."}
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          handleSearch();
+        }
+      }}
+      className={`px-4 py-2 w-full rounded-md border ${
+        error ? "border-red-500 placeholder-red-500" : "border-gray-300"
+      } focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-black text-white`}
+    />
+    <button
+      onClick={handleSearch}
+      className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600"
+    >
+      Search
+    </button>
+  </div>
+ 
+</div>
+<p className="text-center text-sm text-white pt-6">easily find what you're looking for, just search and jump right to it!</p>
+
+      <Sofa id="sofa-section" />
+      <Kitchen  id="kitchen-section"/>
+      <Wardrobe id="wardrobe-section" />
       <footer className=" border-t border-yellow-600 bottom-0 left-0 w-full bg-black text-white py-6">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           {/* Top Section: Links */}

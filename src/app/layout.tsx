@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       
   <script
-            dangerouslySetInnerHTML={{
+          async  dangerouslySetInnerHTML={{
               __html: `
                 MomentCRM('init', {
                   'teamVanityId': 'manny-livechat',
