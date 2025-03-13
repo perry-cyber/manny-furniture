@@ -70,7 +70,7 @@ export default function page() {
   </div>
  
 </div>
-<p className="text-center text-sm text-white pt-6">easily find what you're looking for, just search and jump right to it!</p>
+<p className="text-center lg:text-sm md:tex-sm text-[10px] text-white pt-6">easily find what you're looking for, just search and jump right to it!</p>
 
       <Sofa id="sofa-section" />
       <Kitchen  id="kitchen-section"/>
