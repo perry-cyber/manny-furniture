@@ -1,3 +1,4 @@
+"use client";
 import FloatingNavbar from '@/components/FloatingNav'
 import { WavyBackground } from '@/components/ui/wavy-background'
 import React from 'react'
