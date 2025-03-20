@@ -1,19 +1,57 @@
-"use client";
-import FloatingNavbar from '@/components/FloatingNav'
-import { WavyBackground } from '@/components/ui/wavy-background'
-import React from 'react'
 
-export default function page() {
+
+
+"use client";
+
+import FloatingNavbar from "@/components/FloatingNav";
+import { WavyBackground } from "@/components/ui/wavy-background";
+import React, { useEffect } from "react";
+import Script from "next/script";
+import Head from "next/head";
+import Map from "@/components/Maps";
+
+export default function Page() {
+  useEffect(() => {
+    (window as any).initMap = function () {
+      new google.maps.Map(document.getElementById("map") as HTMLElement, {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
+    };
+  }, []);
+  
+
   return (
     <div>
-                <FloatingNavbar/>
-                  <WavyBackground className="w-full mx-auto flex items-center justify-center pb-10">
-                  <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
-                    CONTACT US
-                  </p>
-                  
-                </WavyBackground>
-                <footer className=" border-t border-yellow-600 bottom-0 left-0 w-full bg-black text-white py-6">
+      {/* ✅ Head for SEO & Metadata */}
+      <Head>
+        <title>Contact Us</title>
+        <meta name="description" content="Get in touch with us today." />
+      </Head>
+
+      {/* ✅ Google Maps Script - Loads only when needed */}
+      <Script
+        src={`https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap`}
+        strategy="lazyOnload"
+      />
+
+      {/* ✅ Navbar & Hero Section */}
+      <FloatingNavbar />
+      <WavyBackground className="w-full mx-auto flex items-center justify-center pb-10">
+        <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+          CONTACT US
+        </p>
+      </WavyBackground>
+
+      {/* ✅ Map Container */}
+      <div id="map" style={{ height: "400px", width: "100%" }}>
+        <Map/>
+      </div>
+
+      <h1>Contact Us</h1>
+
+      {/* ✅ Footer & Other Content */}
+      <footer className=" border-t border-yellow-600 bottom-0 left-0 w-full bg-black text-white py-6">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           {/* Top Section: Links */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -54,20 +92,7 @@ export default function page() {
               </div>
 
               {/* Legal */}
-              <div>
-                <h3 className="font-semibold text-gray-300 mb-2">LEGAL</h3>
-                <ul className="space-y-1 text-gray-400 text-sm">
-                  <li>
-                    <a href="#">Terms of use</a>
-                  </li>
-                  <li>
-                    <a href="#">Privacy policy</a>
-                  </li>
-                  <li>
-                    <a href="#">Cookie policy</a>
-                  </li>
-                </ul>
-              </div>
+            
             </div>
           </div>
 
@@ -182,6 +207,5 @@ export default function page() {
     </svg>
   </div>
     </div>
-   
-  )
+  );
 }

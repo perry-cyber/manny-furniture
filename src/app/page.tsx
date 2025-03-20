@@ -11,7 +11,6 @@ export default function HeroParallaxDemo() {
   return( <>
      <div
       className="flex justify-center items-center inset-0 bg-black  bg-[radial-gradient(circle_at_top_right,_rgba(255,255,0,0.2),_transparent_20%),radial-gradient(circle_at_bottom,_rgba(255,255,0,0.2),_transparent_20%)] relative pb-4 overflow-clip"
-      
     >
        {/* <ScrollIndicator /> */}
       {/* <Snowfall/> */}
@@ -147,16 +146,5 @@ export default function HeroParallaxDemo() {
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
   },
-  {
-    title: "Invoker Labs",
- 
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-  
-    thumbnail:
-      "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreia7necmdjeo2zi3adxpak54elrgjuslogbzdrqhhv7vr5ttq2wpoy",
-  },
+
 ];

@@ -33,7 +33,7 @@ export const ParallaxScroll = ({
       ref={gridRef}
     >
       <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-5xl mx-auto gap-8 py-20 px-6"
+        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-5xl mx-auto gap-8 py-20 px-6"
         ref={gridRef}
       >
         <div className="grid gap-10">
@@ -52,7 +52,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        <div className="grid gap-10">
+        {/* <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <img
@@ -77,7 +77,7 @@ export const ParallaxScroll = ({
               />
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -76,15 +76,7 @@ export default function About() {
               </ul>
             </div>
 
-            {/* Legal */}
-            <div>
-              <h3 className="font-semibold text-gray-300 mb-2">LEGAL</h3>
-              <ul className="space-y-1 text-gray-400 text-sm">
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Cookie policy</a></li>
-              </ul>
-            </div>
+        
           </div>
         </div>
 

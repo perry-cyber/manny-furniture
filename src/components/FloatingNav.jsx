@@ -9,13 +9,12 @@ export default function FloatingNavbar() {
   return (
     <div className="fixed top-4 w-full flex justify-between items-center px-6 py-3 z-50 bg-transparent">
     {/* Logo - Fully Left */}
-    <div className="bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg ml-6 w-28 h-28">
+    <div className="bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg lg:ml-6 w-20 h-20 lg:w-28 lg:h-28">
     <Link href="/"> <img
         src="https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreihpyskso3k3evs355tmrd5fn747g4liyhz3znjmutxio6ujpyrefu"
         alt="Logo"
-        className="h-25 w-25 object-contain"
+        className="h-18 w-18 lg:h-25 lg:w-25 object-contain"
       /></Link>
-     
     </div>
   
     {/* Navbar - Fully Right */}
@@ -32,8 +31,8 @@ export default function FloatingNavbar() {
     <div className="block md:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={35}
-        height={35}
+        width={25}
+        height={25}
         viewBox="0 0 20 20"
         className="cursor-pointer text-white"
         onClick={() => setIsOpen(!isOpen)}
