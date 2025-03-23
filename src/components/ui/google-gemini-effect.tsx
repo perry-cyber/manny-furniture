@@ -9,13 +9,11 @@ import {
 } from "motion/react";
 import Link from "next/link";
 
-// import { useRouter } from "next/router";
-export  const HeroParallax = ({
+export const HeroParallax = ({
   products,
 }: {
   products: {
     title: string;
-  
     thumbnail: string;
   }[];
 }) => {
@@ -23,6 +21,16 @@ export  const HeroParallax = ({
   const secondRow = products.slice(5, 10);
   const thirdRow = products.slice(10, 15);
   const ref = React.useRef(null);
+
+  // Disable scrolling on page load
+  useEffect(() => {
+    document.body.style.overflow = "hidden";  // Disable scrolling
+
+    return () => {
+      document.body.style.overflow = "auto"; // Re-enable scrolling on component unmount
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -54,10 +62,11 @@ export  const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-screen py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -78,7 +87,7 @@ export  const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row mb-20 space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -103,21 +112,14 @@ export  const HeroParallax = ({
 
 export const Header = () => {
   return (
-<div className="max-w-7xl relative mx-auto px-5 py-20 md:py-40 md:px-18 lg:px-18 w-full left-0 top-0">
-  <h1 className="text-2xl md:text-5xl font-bold !text-white">
-    Welcome to Manny Production
-  </h1>
-  <p className="max-w-2xl text-base md:text-xl mt-8 !text-neutral-200">
-    A premier provider of bespoke furniture and upholstery solutions. We are a dynamic and innovative company that has established itself as a leader in the Nigerian furniture and interior industry.
-  </p>
-
-
-      
-   
-      
-
-</div>
-
+    <div className="max-w-7xl relative mx-auto px-5 py-20 md:py-40 md:px-18 lg:px-18 w-full left-0 top-0">
+      <h1 className="text-2xl md:text-5xl font-bold !text-white">
+        Welcome to Manny Production
+      </h1>
+      <p className="max-w-2xl text-base md:text-xl mt-8 !text-neutral-200">
+        A premier provider of bespoke furniture and upholstery solutions. We are a dynamic and innovative company that has established itself as a leader in the Nigerian furniture and interior industry.
+      </p>
+    </div>
   );
 };
 
@@ -127,7 +129,6 @@ export const ProductCard = ({
 }: {
   product: {
     title: string;
- 
     thumbnail: string;
   };
   translate: MotionValue<number>;
@@ -143,15 +144,13 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-96 w-[30rem] relative shrink-0"
     >
-     
-        <img
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
-        />
-     
+      <img
+        src={product.thumbnail}
+        height="600"
+        width="600"
+        className="object-cover object-left-top absolute h-full w-full inset-0"
+        alt={product.title}
+      />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
         {product.title}
