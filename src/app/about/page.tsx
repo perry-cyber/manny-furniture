@@ -22,21 +22,21 @@ export default function About() {
     </WavyBackground>
 <TimelineDemo/>
 
-    <div className="bg-white  mt-28 mb-28 text-black px-6 md:px-16 py-12 rounded-lg flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto shadow-xl w-full">
+    <div className="bg-black  mt-28 mb-28 text-white px-6 md:px-16 py-12 rounded-lg flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto shadow-xl w-full">
       {/* Image Section */}
-      <div className="relative w-32 h-32 md:w-40 md:h-40 mb-6 md:mb-0 md:mr-8">
+      <div className="relative w-40 h-40 md:w-58 md:h-58 mb-6 md:mb-0 md:mr-8">
         <img
-          src="https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreiaazwgnvphrubddtcvzvvgekzvzqk7wfhwtidqgcraxebkbxqpg7i"
+          src="https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreie2g5y3ivakxxosgo6cyvujk6qc7jjjyhof45hehnjeq3d5pdwufm"
           alt="Founder"
         
-          className="rounded-xl shadow-lg transform rotate-2"
+          className="rounded-xl shadow-lg transform rotate-2 "
         />
       </div>
 
       {/* Text Content */}
       <div className="flex-1 text-center md:text-left">
         <p className="text-lg md:text-xl leading-relaxed italic">
-          “Emmanuel Ayodelebami is the lead project manager and supervisor of Manny Furniture Production and Interior. With over 8 years of experience in the furniture industry, he has established himself as a respected expert in his field. His idealistic and creative approach to furniture design and production has been instrumental in driving the company's success. Under his leadership, Manny Furniture Production and Interior continues to push the boundaries of innovation, quality, and customer satisfaction.”
+          <strong>Meet Ayodelebami Emmanuel</strong> The visionary founder, supervisor, and manager of Manny Furniture Production and Interior. With over 8 years of experience in the furniture industry, Ayodelebami has established himself as a respected expert in his field. His idealistic and creative approach to furniture design and production has been instrumental in driving the company's success. Under his leadership, Manny Furniture Production and Interior continues to push the boundaries of innovation, quality, and customer satisfaction.
         </p>
         <p className="mt-6 font-bold text-xl">Emmanuel Ayodelebami</p>
         <p className="text-gray-500 text-lg">Founder of Manny Production and Interior</p>
