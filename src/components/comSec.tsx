@@ -65,7 +65,7 @@ const CommunitySection = () => {
       {/* Stats Section */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 text-center gap-8">
         <div>
-          <Counter target={4743} />
+          <Counter target={214} />
           <p className="text-gray-300">
             <a href="#" className="font-bold">
             Project Completed and Delivered
@@ -73,7 +73,7 @@ const CommunitySection = () => {
           </p>
         </div>
         <div>
-          <Counter target={3300} />
+          <Counter target={68} />
           <p className="text-gray-300">
             <a href="#" className="font-bold">
               Returning Customers
@@ -81,7 +81,7 @@ const CommunitySection = () => {
           </p>
         </div>
         <div>
-          <Counter target={129} />
+          <Counter target={52} />
           <p className="text-gray-300">
             <a href="#" className="font-bold">
               Hard working Staffs

@@ -7,6 +7,7 @@ import Sofa from "@/components/Sofa";
 import Kitchen from "@/components/Kitchen";
 import Wardrobe from "@/components/Wardrobe";
 import ScrollIndicator from "@/components/Scrolldown";
+import Tvconsole from "@/components/Tvconsole";
 
 export default function page() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -74,6 +75,7 @@ export default function page() {
 
       <Sofa id="sofa-section" />
       <Kitchen  id="kitchen-section"/>
+      <Tvconsole/>
       <Wardrobe id="wardrobe-section" />
       <footer className=" border-t border-yellow-600 bottom-0 left-0 w-full bg-black text-white py-6">
         <div className="container mx-auto px-6 md:px-12 lg:px-20">

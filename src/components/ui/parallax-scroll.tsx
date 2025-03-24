@@ -52,7 +52,7 @@ export const ParallaxScroll = ({
             </motion.div>
           ))}
         </div>
-        {/* <div className="grid gap-10">
+        <div className="grid gap-10">
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <img
@@ -77,7 +77,7 @@ export const ParallaxScroll = ({
               />
             </motion.div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );

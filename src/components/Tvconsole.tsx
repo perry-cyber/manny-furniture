@@ -1,15 +1,15 @@
 import React from 'react'
 import { ParallaxScroll } from './ui/parallax-scroll'
 
-interface WardrobeProps {
+interface TvconsoleProps {
     id?: string;
   }
   
-  export default function Wardrobe({ id }: WardrobeProps) {
+  export default function Tvconsole({ id }: TvconsoleProps) {
     return (
       <div id={id} className="bg-black">
         <h1 className="md:block text-xl pt-10 pb-10 md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500">
-          WARDROBE
+          TV CONSOLE
         </h1>
         <ParallaxScroll images={images} />
       </div>
@@ -19,10 +19,10 @@ interface WardrobeProps {
 
 
 const images = [
-    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreidkgpeu4inwtucspbhmbx4rpoxr5e4rxkn4euh4yrpdzdk7hrrkxy",
-    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreifp763lxkbwxymbzksovqbljk4dj7atezz4qvnyyv23jnt2zpovwu",
-    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreic6ksoi3hbbsuowfmofrv45kcz5bedt5jgegcmhshqa2pyvijm2sm",
-    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreidwxyabmcqf6du6uxilnj66423ioe4cw5r2oo7eitbyzb7zx2r65a",
+    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafybeibcc7zzzwulu2cidprcfhafjyp3mg33mxlrdd6xbqsgrknyqs5t6a",
+    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafybeiermm7wkurzxb2ym2cp4pzychxmzhqalopk3wug5xuiwnzzp3vjxa",
+    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafybeifwbymvrbroeabb4h7vaan2eew2ngep72lnqcdi4smwp2kduz5x3q",
+    "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreib4ir7w53vmzzeizrkfh4xb553akz6qsdv273njrvkrq76tdqxtvy",
     "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreiec6aikme57cjr4yd5wsx4hu37ijm3ytjtk5hvisjs7mcd6f7bqpy",
     "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafybeihcnsflpyqd37hmlrdo2dyxesesx4f3yumj3sfimkb7qjtbpdauwy",
     "https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreiesxgec6q4itnhetmtrct4wdgng3rpbnkwphqaddd25agkg2pqe24",

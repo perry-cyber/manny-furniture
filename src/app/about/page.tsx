@@ -87,16 +87,16 @@ export default function About() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo & Info */}
           <div className="flex items-center space-x-2">
-          <div className=" bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg w-20 h-20">
+          <div className=" bg-transparent backdrop-blur-md rounded-full flex items-center justify-center border border-yellow-700/50 shadow-lg w-10 h-10">
   <img
     src="https://harlequin-legal-ox-300.mypinata.cloud/ipfs/bafkreihpyskso3k3evs355tmrd5fn747g4liyhz3znjmutxio6ujpyrefu"
     alt="Logo"
-    className="h-4 w-14 md:w-14 md:h-14 object-contain"
+    className="h-2 w-2 md:w-14 md:h-14 object-contain"
   />
 </div>
             <div>
               <h2 className="font-bold text-lg">Manny Production & Interior Design.</h2>
-              <p className="text-gray-400 text-sm">Providing reliable tech since 1992</p>
+              <p className="text-gray-400 text-sm">Providing reliable furnitures & interior since 20</p>
             </div>
           </div>
 
